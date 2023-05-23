@@ -44,23 +44,9 @@ class ResultViewController: UIViewController {
     }
     
     private func getResult() {
-        let animal = getMostAnimal(with: answersChosen)
-        switch animal {
-        case .dog:
-            labelImage.text = "Вы - \(animal?.rawValue)"
-            labelResult.text = "Вы - \(animal?.definition)"
-        case .cat:
-            labelImage.text = "Вы - \(animal?.rawValue)"
-            labelResult.text = "Вы - \(animal?.definition)"
-        case .turtle:
-            labelImage.text = "Вы - \(animal?.rawValue)"
-            labelResult.text = "Вы - \(animal?.definition)"
-        case .rabbit:
-            labelImage.text = "Вы - \(animal?.rawValue)"
-            labelResult.text = "Вы - \(animal?.definition)"
-        case .none:
-            return
-        }
+        guard let animal = getMostAnimal(with: answersChosen) else { return }
+        labelImage.text = "Вы - \(animal.rawValue)"
+        labelResult.text = animal.definition
     }
     
     deinit {
