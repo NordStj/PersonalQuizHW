@@ -46,6 +46,7 @@ class ResultViewController: UIViewController {
     private func getResult() {
         guard let animal = getMostAnimal(with: answersChosen) else { return }
         labelImage.text = "Вы - \(animal.rawValue)"
+        labelResult.lineBreakMode = .byWordWrapping
         labelResult.text = animal.definition
     }
     
