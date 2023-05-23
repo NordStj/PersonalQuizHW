@@ -47,17 +47,17 @@ class ResultViewController: UIViewController {
         let animal = getMostAnimal(with: answersChosen)
         switch animal {
         case .dog:
-            labelImage.text = "Вы - 🐶"
-            labelResult.text = "Вы - Собака"
+            labelImage.text = "Вы - \(animal?.rawValue)"
+            labelResult.text = "Вы - \(animal?.definition)"
         case .cat:
-            labelImage.text = "Вы - 🐱"
-            labelResult.text = "Вы - Кот"
+            labelImage.text = "Вы - \(animal?.rawValue)"
+            labelResult.text = "Вы - \(animal?.definition)"
         case .turtle:
-            labelImage.text = "Вы - 🐢"
-            labelResult.text = "Вы - Черепаха"
+            labelImage.text = "Вы - \(animal?.rawValue)"
+            labelResult.text = "Вы - \(animal?.definition)"
         case .rabbit:
-            labelImage.text = "ВЫ - 🐰"
-            labelResult.text = "Вы - Кролик"
+            labelImage.text = "Вы - \(animal?.rawValue)"
+            labelResult.text = "Вы - \(animal?.definition)"
         case .none:
             return
         }
